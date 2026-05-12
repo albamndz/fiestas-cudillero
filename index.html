@@ -1,479 +1,192 @@
-<!DOCTYPE html>
+<!doctype html>
 <html lang="es">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Fiestas de Cudillero · La Fiesta del Mar</title>
-
-    <!-- Bootstrap 5 CSS -->
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Fiestas de Cudillero</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Bootstrap Icons -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" rel="stylesheet">
-    <!-- Google Fonts -->
-    <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=Lato:wght@300;400;700&display=swap" rel="stylesheet">
-    <!-- CSS propio (solo lo que Bootstrap no puede) -->
     <link rel="stylesheet" href="css/estilos.css">
-</head>
+  </head>
+  <body>
 
-<body class="bg-light">
-
-    <!-- =============================================
-         NAVBAR
-    ============================================= -->
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark sticky-top">
-        <div class="container">
-            <a class="navbar-brand text-warning fw-bold" href="index.html">
-                Fiestas de Cudillero
-                <span class="navbar-brand-sub">Asturias · España</span>
-            </a>
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse"
-                    data-bs-target="#navbarMain" aria-controls="navbarMain"
-                    aria-expanded="false" aria-label="Abrir menú">
-                <span class="navbar-toggler-icon"></span>
-            </button>
-            <div class="collapse navbar-collapse justify-content-end" id="navbarMain">
-                <ul class="navbar-nav gap-1">
-                    <li class="nav-item"><a class="nav-link active fw-bold" href="index.html">Inicio</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#historia">Historia</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#tradiciones">Tradiciones</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#galeria">Galería</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="programa.html">Programa</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="pixueto.html">El Pixueto</a></li>
-                    <li class="nav-item"><a class="nav-link fw-bold" href="#contacto">Contacto</a></li>
-                </ul>
-            </div>
+    <!-- NAVBAR -->
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark">
+      <div class="container">
+        <a class="navbar-brand fw-bold text-warning" href="index.html">Fiestas de Cudillero</a>
+        <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#menu" aria-controls="menu" aria-expanded="false" aria-label="Abrir menú">
+          <span class="navbar-toggler-icon"></span>
+        </button>
+        <div class="collapse navbar-collapse" id="menu">
+          <ul class="navbar-nav ms-auto">
+            <li class="nav-item"><a class="nav-link active" href="index.html">Inicio</a></li>
+            <li class="nav-item"><a class="nav-link" href="programa.html">Programa</a></li>
+            <li class="nav-item"><a class="nav-link" href="pixueto.html">El Pixueto</a></li>
+            <li class="nav-item"><a class="nav-link" href="contacto.html">Contacto</a></li>
+          </ul>
         </div>
+      </div>
     </nav>
 
 
-    <!-- =============================================
-         CARRUSEL HERO
-    ============================================= -->
-    <div id="heroCarousel" class="carousel slide carousel-fade" data-bs-ride="carousel" data-bs-interval="5000">
-        <div class="carousel-indicators">
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="0" class="active" aria-current="true" aria-label="Slide 1"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="1" aria-label="Slide 2"></button>
-            <button type="button" data-bs-target="#heroCarousel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+    <!-- CARRUSEL -->
+    <div id="carrusel" class="carousel slide" data-bs-ride="carousel">
+      <div class="carousel-indicators">
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="0" class="active" aria-label="Slide 1"></button>
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="1" aria-label="Slide 2"></button>
+        <button type="button" data-bs-target="#carrusel" data-bs-slide-to="2" aria-label="Slide 3"></button>
+      </div>
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <img src="imagenes_video/lamuravela.jpg" class="d-block w-100" alt="L'Amuravela">
+          <div class="carousel-caption d-none d-md-block">
+            <span class="badge bg-warning text-dark mb-2">Desde el siglo XVII</span>
+            <h2 class="fw-bold">Las Fiestas de San Pedro</h2>
+            <p>La celebración marinera más auténtica de Asturias</p>
+          </div>
         </div>
-        <div class="carousel-inner">
-            <div class="carousel-item active">
-                <img src="imagenes_video/lamuravela.jpg" class="d-block w-100" alt="L'Amuravela de Cudillero">
-                <div class="carousel-caption-custom text-center text-white">
-                    <span class="badge-hero bg-warning text-dark">Desde el siglo XVII</span>
-                    <h2 class="text-white">Las Fiestas de<br>San Pedro de Cudillero</h2>
-                    <p class="text-white-50">La celebración marinera más auténtica de la costa asturiana</p>
-                    <a href="#historia" class="btn btn-warning text-dark fw-bold px-4 py-2">Descubre la historia</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes_video/Fiesta_de_L_Amuravela_1.jpg" class="d-block w-100" alt="Fiesta L'Amuravela">
-                <div class="carousel-caption-custom text-center text-white">
-                    <span class="badge-hero bg-warning text-dark">Tradición única</span>
-                    <h2 class="text-white">L'Amuravela</h2>
-                    <p class="text-white-50">Un sermón humorístico en pixueto que narra los hechos del año</p>
-                    <a href="#tradiciones" class="btn btn-warning text-dark fw-bold px-4 py-2">Ver tradiciones</a>
-                </div>
-            </div>
-            <div class="carousel-item">
-                <img src="imagenes_video/cudi.jpg" class="d-block w-100" alt="Puerto de Cudillero">
-                <div class="carousel-caption-custom text-center text-white">
-                    <span class="badge-hero bg-warning text-dark">29 Junio · San Pedro</span>
-                    <h2 class="text-white">El Pueblo<br>más Bonito del Mar</h2>
-                    <p class="text-white-50">Vive la fiesta en uno de los pueblos más pintorescos de España</p>
-                    <a href="programa.html" class="btn btn-warning text-dark fw-bold px-4 py-2">Ver programa</a>
-                </div>
-            </div>
+        <div class="carousel-item">
+          <img src="imagenes_video/Fiesta_de_L_Amuravela_1.jpg" class="d-block w-100" alt="L'Amuravela">
+          <div class="carousel-caption d-none d-md-block">
+            <span class="badge bg-warning text-dark mb-2">Tradición única</span>
+            <h2 class="fw-bold">L'Amuravela</h2>
+            <p>Un sermón humorístico único en el mundo, en lengua pixueta</p>
+          </div>
         </div>
-        <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
-            <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Anterior</span>
-        </button>
-        <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
-            <span class="carousel-control-next-icon" aria-hidden="true"></span>
-            <span class="visually-hidden">Siguiente</span>
-        </button>
+        <div class="carousel-item">
+          <img src="imagenes_video/cudi.jpg" class="d-block w-100" alt="Cudillero">
+          <div class="carousel-caption d-none d-md-block">
+            <span class="badge bg-warning text-dark mb-2">29 Junio · San Pedro</span>
+            <h2 class="fw-bold">Cudillero te espera</h2>
+            <p>Del 27 de junio al 1 de julio</p>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#carrusel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon"></span>
+        <span class="visually-hidden">Anterior</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#carrusel" data-bs-slide="next">
+        <span class="carousel-control-next-icon"></span>
+        <span class="visually-hidden">Siguiente</span>
+      </button>
     </div>
 
 
-    <!-- =============================================
-         BANNER ESTADÍSTICAS
-    ============================================= -->
-    <section class="bg-warning py-5">
-        <div class="container">
-            <div class="row g-4 text-center">
-                <div class="col-6 col-md-3">
-                    <div class="stat-numero text-dark">+400</div>
-                    <div class="stat-texto text-dark">Años de historia</div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-numero text-dark">29</div>
-                    <div class="stat-texto text-dark">Junio · Día de San Pedro</div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-numero text-dark">5</div>
-                    <div class="stat-texto text-dark">Días de celebración</div>
-                </div>
-                <div class="col-6 col-md-3">
-                    <div class="stat-numero text-dark">1</div>
-                    <div class="stat-texto text-dark">Lengua pixueta única</div>
-                </div>
-            </div>
+    <!-- FRANJA DE DATOS -->
+    <div class="bg-warning py-3">
+      <div class="container">
+        <div class="row text-center">
+          <div class="col-6 col-md-3">
+            <h4 class="fw-bold text-dark mb-0">+400</h4>
+            <small class="text-dark">Años de historia</small>
+          </div>
+          <div class="col-6 col-md-3">
+            <h4 class="fw-bold text-dark mb-0">29 Jun</h4>
+            <small class="text-dark">Día de San Pedro</small>
+          </div>
+          <div class="col-6 col-md-3 mt-2 mt-md-0">
+            <h4 class="fw-bold text-dark mb-0">5 días</h4>
+            <small class="text-dark">De celebración</small>
+          </div>
+          <div class="col-6 col-md-3 mt-2 mt-md-0">
+            <h4 class="fw-bold text-dark mb-0">Asturias</h4>
+            <small class="text-dark">Costa Cantábrica</small>
+          </div>
         </div>
+      </div>
+    </div>
+
+
+    <!-- TRES TARJETAS -->
+    <section class="py-5">
+      <div class="container">
+
+        <div class="row mb-4">
+          <div class="col">
+            <h2 class="fw-bold">Bienvenidos a Cudillero</h2>
+            <hr class="border-warning border-3 opacity-100 w-25">
+            <p class="text-muted">Una villa marinera asturiana que cada verano celebra una de las fiestas más singulares y auténticas de toda España.</p>
+          </div>
+        </div>
+
+        <div class="row row-cols-1 row-cols-md-3 g-4">
+
+          <div class="col">
+            <div class="card h-100 border-top border-warning border-3">
+              <img src="imagenes_video/cudillero_san_pedro.jpg" class="card-img-top img-galeria" alt="Historia">
+              <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="bi bi-book-fill text-warning me-2"></i>Historia y tradición</h5>
+                <p class="card-text text-muted">Siglos de cultura marinera, la lengua pixueta y el vínculo con San Pedro dan forma a una fiesta irrepetible.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="pixueto.html" class="btn btn-warning text-dark fw-bold w-100">Conoce el Pixueto</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 border-top border-warning border-3">
+              <img src="imagenes_video/lamuravela.jpg" class="card-img-top img-galeria" alt="L'Amuravela">
+              <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="bi bi-megaphone-fill text-warning me-2"></i>L'Amuravela</h5>
+                <p class="card-text text-muted">El acto más esperado: un sermón humorístico en pixueto que repasa los hechos del año. Único en el mundo.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="programa.html" class="btn btn-warning text-dark fw-bold w-100">Ver el programa</a>
+              </div>
+            </div>
+          </div>
+
+          <div class="col">
+            <div class="card h-100 border-top border-warning border-3">
+              <img src="imagenes_video/imgSanpedro.jpg" class="card-img-top img-galeria" alt="San Pedro">
+              <div class="card-body">
+                <h5 class="card-title fw-bold"><i class="bi bi-award-fill text-warning me-2"></i>Bautizo Pixueto</h5>
+                <p class="card-text text-muted">¿Quieres ser pixueto oficial? El 29 de junio cualquier visitante puede obtener su diploma en la ceremonia.</p>
+              </div>
+              <div class="card-footer bg-white border-0">
+                <a href="pixueto.html#bautizo" class="btn btn-warning text-dark fw-bold w-100">Hazte Pixueto</a>
+              </div>
+            </div>
+          </div>
+
+        </div>
+      </div>
     </section>
 
 
-    <!-- =============================================
-         SECCIÓN HISTORIA
-    ============================================= -->
-    <section id="historia" class="py-5 bg-white">
-        <div class="container py-4">
-            <div class="row align-items-center g-5">
-
-                <!-- Texto -->
-                <div class="col-12 col-lg-6">
-                    <span class="section-label">Nuestros orígenes</span>
-                    <h2 class="display-6 fw-bold text-dark">Una fiesta<br>nacida del mar</h2>
-                    <div class="divider-gold"></div>
-                    <p class="text-secondary lh-lg mb-3">
-                        Las fiestas de Cudillero tienen sus raíces en la tradición marinera del pueblo. Desde hace siglos, los pescadores y sus familias honran a <strong>San Pedro</strong>, patrón de los marineros, y celebran la llegada del verano con música, procesiones y actividades culturales.
-                    </p>
-                    <p class="text-secondary lh-lg mb-4">
-                        Esta combinación de devoción y celebración ha mantenido viva la identidad del pueblo a lo largo del tiempo, convirtiendo a Cudillero en uno de los municipios más singulares de toda la costa cantábrica.
-                    </p>
-
-                    <ul class="list-group list-group-flush mb-4">
-                        <li class="list-group-item d-flex align-items-center gap-3 px-0">
-                            <i class="bi bi-geo-alt-fill text-warning fs-5"></i>
-                            <span><strong>Ubicación:</strong> Cudillero, Asturias — Costa Cantábrica</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center gap-3 px-0">
-                            <i class="bi bi-calendar3 text-warning fs-5"></i>
-                            <span><strong>Fecha principal:</strong> 29 de junio, festividad de San Pedro</span>
-                        </li>
-                        <li class="list-group-item d-flex align-items-center gap-3 px-0">
-                            <i class="bi bi-star-fill text-warning fs-5"></i>
-                            <span><strong>Reconocimiento:</strong> Fiesta de Interés Turístico Regional</span>
-                        </li>
-                    </ul>
-
-                    <a href="programa.html" class="btn btn-warning text-dark fw-bold px-4 py-2">
-                        <i class="bi bi-calendar-event me-2"></i>Ver programa completo
-                    </a>
-                </div>
-
-                <!-- Imagen -->
-                <div class="col-12 col-lg-6">
-                    <img src="imagenes_video/cudillero_san_pedro.jpg"
-                         alt="Historia de las Fiestas de Cudillero"
-                         class="historia-img">
-                </div>
-
-            </div>
+    <!-- FOOTER -->
+    <footer class="bg-black text-white py-4">
+      <div class="container">
+        <div class="row g-4">
+          <div class="col-12 col-md-4">
+            <h5 class="fw-bold text-warning">Fiestas de Cudillero</h5>
+            <p class="text-white-50 small">La fiesta marinera más auténtica de la costa asturiana.</p>
+          </div>
+          <div class="col-6 col-md-4">
+            <h6 class="fw-bold text-warning">Páginas</h6>
+            <ul class="list-unstyled">
+              <li><a href="index.html" class="text-white-50 text-decoration-none small">Inicio</a></li>
+              <li><a href="programa.html" class="text-white-50 text-decoration-none small">Programa</a></li>
+              <li><a href="pixueto.html" class="text-white-50 text-decoration-none small">El Pixueto</a></li>
+              <li><a href="contacto.html" class="text-white-50 text-decoration-none small">Contacto</a></li>
+            </ul>
+          </div>
+          <div class="col-6 col-md-4">
+            <h6 class="fw-bold text-warning">Contacto</h6>
+            <ul class="list-unstyled">
+              <li class="text-white-50 small"><i class="bi bi-geo-alt me-1"></i>Plaza de la Marina · Cudillero</li>
+              <li class="text-white-50 small"><i class="bi bi-envelope me-1"></i>fiestas@cudillero.org</li>
+              <li class="text-white-50 small"><i class="bi bi-calendar3 me-1"></i>27 jun – 1 jul</li>
+            </ul>
+          </div>
         </div>
-    </section>
-
-
-    <!-- =============================================
-         SECCIÓN TRADICIONES
-    ============================================= -->
-    <section id="tradiciones" class="py-5 bg-light">
-        <div class="container py-4">
-
-            <div class="row justify-content-center mb-5">
-                <div class="col-12 col-md-8 text-center">
-                    <span class="section-label">Lo que nos hace únicos</span>
-                    <h2 class="display-6 fw-bold text-dark">Tradiciones y Cultura</h2>
-                    <div class="divider-gold mx-auto"></div>
-                    <p class="text-muted">Cada celebración es un capítulo de nuestra identidad. Descubre las costumbres que generación tras generación mantienen vivo el espíritu pixueto.</p>
-                </div>
-            </div>
-
-            <div class="row g-4">
-
-                <div class="col-12 col-sm-6 col-lg-4 d-flex">
-                    <div class="card card-tradicion shadow-sm border-0 w-100">
-                        <div class="card-body p-4">
-                            <div class="card-icon bg-dark text-warning">
-                                <i class="bi bi-megaphone-fill"></i>
-                            </div>
-                            <h5 class="card-title text-dark">L'Amuravela</h5>
-                            <p class="card-text text-secondary small lh-lg">El acto central de las fiestas donde se recita un sermón humorístico en pixueto sobre los hechos más importantes de la villa durante el año.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 d-flex">
-                    <div class="card card-tradicion shadow-sm border-0 w-100">
-                        <div class="card-body p-4">
-                            <div class="card-icon bg-dark text-warning">
-                                <i class="bi bi-water"></i>
-                            </div>
-                            <h5 class="card-title text-dark">Procesiones Marineras</h5>
-                            <p class="card-text text-secondary small lh-lg">Imágenes religiosas recorren las calles hasta llegar al puerto, acompañadas de música de gaitas y charangas locales.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 d-flex">
-                    <div class="card card-tradicion shadow-sm border-0 w-100">
-                        <div class="card-body p-4">
-                            <div class="card-icon bg-dark text-warning">
-                                <i class="bi bi-award-fill"></i>
-                            </div>
-                            <h5 class="card-title text-dark">Bautizo Pixueto</h5>
-                            <p class="card-text text-secondary small lh-lg">Una tradición única donde cualquier visitante puede convertirse en pixueto y recibir su diploma oficial de la villa.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 d-flex">
-                    <div class="card card-tradicion shadow-sm border-0 w-100">
-                        <div class="card-body p-4">
-                            <div class="card-icon bg-dark text-warning">
-                                <i class="bi bi-music-note-beamed"></i>
-                            </div>
-                            <h5 class="card-title text-dark">Verbenas y Música</h5>
-                            <p class="card-text text-secondary small lh-lg">Durante toda la fiesta se celebran actuaciones musicales en la plaza y el puerto, con grupos locales y música tradicional asturiana.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 d-flex">
-                    <div class="card card-tradicion shadow-sm border-0 w-100">
-                        <div class="card-body p-4">
-                            <div class="card-icon bg-dark text-warning">
-                                <i class="bi bi-egg-fried"></i>
-                            </div>
-                            <h5 class="card-title text-dark">Gastronomía Local</h5>
-                            <p class="card-text text-secondary small lh-lg">Platos típicos asturianos como el bollu preñau y pescados frescos del Cantábrico que llenan de sabor las fiestas.</p>
-                        </div>
-                    </div>
-                </div>
-
-                <div class="col-12 col-sm-6 col-lg-4 d-flex">
-                    <div class="card card-tradicion shadow-sm border-0 w-100">
-                        <div class="card-body p-4">
-                            <div class="card-icon bg-dark text-warning">
-                                <i class="bi bi-translate"></i>
-                            </div>
-                            <h5 class="card-title text-dark">La Lengua Pixueta</h5>
-                            <p class="card-text text-secondary small lh-lg">El pixueto es el dialecto propio de Cudillero. Durante las fiestas cobra especial protagonismo como signo de identidad colectiva.</p>
-                        </div>
-                    </div>
-                </div>
-
-            </div>
-
-            <div class="row mt-5">
-                <div class="col-12 text-center">
-                    <a href="pixueto.html" class="btn btn-warning text-dark fw-bold px-4 py-2">
-                        <i class="bi bi-person-badge me-2"></i>Conoce más sobre el Pixueto
-                    </a>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- =============================================
-         SECCIÓN GALERÍA
-    ============================================= -->
-    <section id="galeria" class="py-5 bg-white">
-        <div class="container py-4">
-
-            <div class="row mb-5">
-                <div class="col-12 text-center">
-                    <span class="section-label">Imágenes de la fiesta</span>
-                    <h2 class="display-6 fw-bold text-dark">Galería de Fotos</h2>
-                    <div class="divider-gold mx-auto"></div>
-                </div>
-            </div>
-
-            <div class="row g-3">
-                <div class="col-6 col-md-4">
-                    <div class="gallery-item">
-                        <img src="imagenes_video/lamuravela.jpg" alt="L'Amuravela de Cudillero" loading="lazy">
-                        <div class="gallery-overlay"><i class="bi bi-zoom-in text-white fs-3"></i></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="gallery-item">
-                        <img src="imagenes_video/Fiesta_de_L_Amuravela_1.jpg" alt="Fiesta de L'Amuravela" loading="lazy">
-                        <div class="gallery-overlay"><i class="bi bi-zoom-in text-white fs-3"></i></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="gallery-item">
-                        <img src="imagenes_video/Fiesta_de_L_Amuravela.jpg" alt="Celebración en Cudillero" loading="lazy">
-                        <div class="gallery-overlay"><i class="bi bi-zoom-in text-white fs-3"></i></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="gallery-item">
-                        <img src="imagenes_video/cudi.jpg" alt="Pueblo de Cudillero" loading="lazy">
-                        <div class="gallery-overlay"><i class="bi bi-zoom-in text-white fs-3"></i></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="gallery-item">
-                        <img src="imagenes_video/imgSanpedro.jpg" alt="San Pedro Cudillero" loading="lazy">
-                        <div class="gallery-overlay"><i class="bi bi-zoom-in text-white fs-3"></i></div>
-                    </div>
-                </div>
-                <div class="col-6 col-md-4">
-                    <div class="gallery-item">
-                        <img src="imagenes_video/amuravela-cudillero-2024 (24).jpg" alt="Amuravela 2024" loading="lazy">
-                        <div class="gallery-overlay"><i class="bi bi-zoom-in text-white fs-3"></i></div>
-                    </div>
-                </div>
-            </div>
-
-        </div>
-    </section>
-
-
-    <!-- =============================================
-         SECCIÓN CONTACTO
-    ============================================= -->
-    <section id="contacto" class="py-5 bg-dark text-white">
-        <div class="container py-4">
-            <div class="row g-5">
-
-                <!-- Info -->
-                <div class="col-12 col-lg-5">
-                    <span class="section-label" style="color:var(--dorado-claro)">Escríbenos</span>
-                    <h2 class="display-6 fw-bold text-white">¿Tienes alguna<br>pregunta?</h2>
-                    <div class="divider-gold"></div>
-                    <p class="text-white-50 mb-4">Estamos aquí para ayudarte con cualquier duda sobre las fiestas, alojamiento o actividades en Cudillero.</p>
-
-                    <ul class="list-unstyled">
-                        <li class="d-flex align-items-start gap-3 mb-3">
-                            <i class="bi bi-geo-alt-fill text-warning fs-5 mt-1"></i>
-                            <div>
-                                <strong class="d-block text-white small text-uppercase" style="letter-spacing:1px;">Dirección</strong>
-                                <span class="text-white-50 small">Plaza de la Marina, s/n · 33150 Cudillero</span>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-3 mb-3">
-                            <i class="bi bi-calendar-event-fill text-warning fs-5 mt-1"></i>
-                            <div>
-                                <strong class="d-block text-white small text-uppercase" style="letter-spacing:1px;">Fechas</strong>
-                                <span class="text-white-50 small">Del 27 de junio al 1 de julio</span>
-                            </div>
-                        </li>
-                        <li class="d-flex align-items-start gap-3 mb-3">
-                            <i class="bi bi-envelope-fill text-warning fs-5 mt-1"></i>
-                            <div>
-                                <strong class="d-block text-white small text-uppercase" style="letter-spacing:1px;">Email</strong>
-                                <span class="text-white-50 small">fiestas@cudillero.org</span>
-                            </div>
-                        </li>
-                    </ul>
-
-                    <p class="text-white-50 small text-uppercase fw-bold mt-4 mb-2" style="letter-spacing:2px;">Síguenos</p>
-                    <div class="d-flex gap-2">
-                        <a href="https://www.facebook.com/groups/465960120579283/?locale=es_ES" class="btn btn-outline-warning btn-sm rounded-circle p-2" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/explore/locations/706794131/cudillero-asturias/" class="btn btn-outline-warning btn-sm rounded-circle p-2" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://x.com/LosPueblosmbe/status/1934672974889492660" class="btn btn-outline-warning btn-sm rounded-circle p-2" target="_blank" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
-                    </div>
-                </div>
-
-                <!-- Formulario -->
-                <div class="col-12 col-lg-7">
-                    <form class="form-contacto" action="#" method="post" novalidate>
-                        <div class="row g-3">
-                            <div class="col-12 col-sm-6">
-                                <label for="nombre" class="form-label text-white-50 small text-uppercase fw-bold" style="letter-spacing:1px;">Nombre</label>
-                                <input type="text" class="form-control" id="nombre" name="nombre" placeholder="Tu nombre" required>
-                            </div>
-                            <div class="col-12 col-sm-6">
-                                <label for="apellidos" class="form-label text-white-50 small text-uppercase fw-bold" style="letter-spacing:1px;">Apellidos</label>
-                                <input type="text" class="form-control" id="apellidos" name="apellidos" placeholder="Tus apellidos">
-                            </div>
-                            <div class="col-12">
-                                <label for="email" class="form-label text-white-50 small text-uppercase fw-bold" style="letter-spacing:1px;">Correo electrónico</label>
-                                <input type="email" class="form-control" id="email" name="email" placeholder="tu@email.com" required>
-                            </div>
-                            <div class="col-12">
-                                <label for="asunto" class="form-label text-white-50 small text-uppercase fw-bold" style="letter-spacing:1px;">Asunto</label>
-                                <select class="form-select form-control" id="asunto" name="asunto">
-                                    <option value="" disabled selected>Selecciona un asunto</option>
-                                    <option>Información sobre las fiestas</option>
-                                    <option>Alojamiento y transporte</option>
-                                    <option>Programa de actividades</option>
-                                    <option>Bautizo Pixueto</option>
-                                    <option>Otros</option>
-                                </select>
-                            </div>
-                            <div class="col-12">
-                                <label for="mensaje" class="form-label text-white-50 small text-uppercase fw-bold" style="letter-spacing:1px;">Mensaje</label>
-                                <textarea class="form-control" id="mensaje" name="mensaje" rows="5" placeholder="Escribe tu mensaje aquí..." required></textarea>
-                            </div>
-                            <div class="col-12">
-                                <button type="submit" class="btn btn-warning text-dark fw-bold w-100 py-3">
-                                    <i class="bi bi-send-fill me-2"></i>Enviar mensaje
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-
-            </div>
-        </div>
-    </section>
-
-
-    <!-- =============================================
-         FOOTER
-    ============================================= -->
-    <footer class="bg-black text-white pt-5 pb-3">
-        <div class="container">
-            <div class="row g-5">
-
-                <div class="col-12 col-md-4">
-                    <p class="fs-5 fw-bold text-warning mb-1">Fiestas de Cudillero</p>
-                    <span class="footer-logo-sub text-white-50">Asturias · España</span>
-                    <p class="text-white-50 small lh-lg mt-3">La fiesta marinera más auténtica de la costa asturiana. Tradición, cultura y diversión para toda la familia.</p>
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <p class="footer-title text-warning">Páginas</p>
-                    <ul class="list-unstyled">
-                        <li><a href="index.html" class="text-white-50 text-decoration-none small d-block mb-2">Inicio</a></li>
-                        <li><a href="#historia" class="text-white-50 text-decoration-none small d-block mb-2">Historia</a></li>
-                        <li><a href="#tradiciones" class="text-white-50 text-decoration-none small d-block mb-2">Tradiciones</a></li>
-                        <li><a href="#galeria" class="text-white-50 text-decoration-none small d-block mb-2">Galería</a></li>
-                        <li><a href="programa.html" class="text-white-50 text-decoration-none small d-block mb-2">Programa</a></li>
-                        <li><a href="pixueto.html" class="text-white-50 text-decoration-none small d-block mb-2">El Pixueto</a></li>
-                    </ul>
-                </div>
-
-                <div class="col-6 col-md-4">
-                    <p class="footer-title text-warning">Contacto</p>
-                    <ul class="list-unstyled">
-                        <li class="text-white-50 small mb-2"><i class="bi bi-geo-alt me-2"></i>Plaza de la Marina · Cudillero</li>
-                        <li class="text-white-50 small mb-2"><i class="bi bi-envelope me-2"></i>fiestas@cudillero.org</li>
-                        <li class="text-white-50 small mb-2"><i class="bi bi-calendar3 me-2"></i>27 jun – 1 jul · San Pedro</li>
-                    </ul>
-                    <div class="d-flex gap-2 mt-3">
-                        <a href="https://www.facebook.com/groups/465960120579283/?locale=es_ES" class="btn btn-outline-secondary btn-sm rounded-circle p-2" target="_blank" aria-label="Facebook"><i class="bi bi-facebook"></i></a>
-                        <a href="https://www.instagram.com/explore/locations/706794131/cudillero-asturias/" class="btn btn-outline-secondary btn-sm rounded-circle p-2" target="_blank" aria-label="Instagram"><i class="bi bi-instagram"></i></a>
-                        <a href="https://x.com/LosPueblosmbe/status/1934672974889492660" class="btn btn-outline-secondary btn-sm rounded-circle p-2" target="_blank" aria-label="Twitter/X"><i class="bi bi-twitter-x"></i></a>
-                    </div>
-                </div>
-
-            </div>
-
-            <hr class="border-secondary mt-5">
-            <p class="text-center text-white-50 small mb-0">
-                © 2025 Fiestas de Cudillero · Todos los derechos reservados · Diseño web DIWEB 25-26
-            </p>
-        </div>
+        <hr class="border-secondary">
+        <p class="text-center text-white-50 small mb-0">© 2025 Fiestas de Cudillero · Todos los derechos reservados</p>
+      </div>
     </footer>
 
-
-    <!-- Bootstrap 5 JS -->
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"></script>
-</body>
+  </body>
 </html>
