@@ -1,6 +1,6 @@
 /* Carrusel */
 #carrusel .carousel-item img {
-    height: 820px;
+    height: 600px;
     object-fit: cover;
 }
 
